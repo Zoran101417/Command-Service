@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="
+      http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc.xsd
+       http://www.springframework.org/schema/tx
+       http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <context:component-scan base-package="com.command_service.*"/>
+    <mvc:annotation-driven/>
+
+<!--    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">-->
+<!--        <property name="driverClassName" value="com.mysql.jdbc.Driver" />-->
+<!--        <property name="url" value="jdbc:mysql://localhost:3306/tmpdatabase_hibernate?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC" />-->
+<!--        <property name="username" value="root" />-->
+<!--        <property name="password" value="root" />-->
+<!--    </bean>-->
+
+<!--    &lt;!&ndash; Configure Hibernate session factory &ndash;&gt;-->
+<!--    <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">-->
+<!--        <property name="dataSource" ref="dataSource" />-->
+<!--        <property name="hibernateProperties">-->
+<!--            <props>-->
+<!--                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>-->
+<!--                <prop key="hibernate.show_sql">true</prop>-->
+<!--            </props>-->
+<!--        </property>-->
+<!--        <property name="packagesToScan" value="com.command_service.model" />-->
+<!--    </bean>-->
+
+<!--    &lt;!&ndash; Define a LocalSessionFactoryBean for Hibernate, referencing hibernate.cfg.xml &ndash;&gt;-->
+<!--    <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">-->
+<!--        <property name="configLocation" value="classpath:hibernate.cfg.xml" />-->
+<!--    </bean>-->
+
+<!--    &lt;!&ndash; Configure the Hibernate Transaction Manager &ndash;&gt;-->
+<!--    <bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">-->
+<!--        <property name="sessionFactory" ref="sessionFactory" />-->
+<!--    </bean>-->
+
+<!--    &lt;!&ndash; Enable declarative transaction management &ndash;&gt;-->
+<!--    <tx:annotation-driven />-->
+
+</beans>
